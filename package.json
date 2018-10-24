@@ -2,7 +2,12 @@
   "name": "jsdevenv",
   "version": "1.0.1",
   "description": "JavaScript development environment Pluralsight course by Cory House",
-  "scripts": {},
+  "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "open:src": "node buildScripts/srcServer.js",
+    "localtunnel" : "lt --port 3010",
+    "share" : "npm-run-all --parallel open:src localtunnel"
+  },
   "author": "Adi S",
   "license": "MIT",
   "dependencies": {
