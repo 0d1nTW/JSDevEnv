@@ -3,21 +3,23 @@
   "version": "1.0.1",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
-    "prestart": "node buildScripts/startMessage.js",
-    "open:src": "node buildScripts/srcServer.js",
-    "localtunnel" : "lt --port 3010",
-    "share" : "npm-run-all --parallel open:src localtunnel"
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "localtunnel": "lt --port 3010",
+    "share": "npm-run-all --parallel open:src localtunnel"
   },
   "author": "Adi S",
   "license": "MIT",
-  "dependencies": {    
+  "dependencies": {
+    "babel-loader": "^7.1.5",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
-    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "chalk": "^2.4.1",
