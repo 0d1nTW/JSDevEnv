@@ -1,5 +1,5 @@
 export default function getBaseUrl() {
-    return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3010/' : '/';
+    return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3010/' : 'https://shrouded-spire-38145.herokuapp.com/';
   }
   
   function getQueryStringParameterByName(name, url) {
